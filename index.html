@@ -7,63 +7,149 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #001f3f, #003366);
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #0a0f27, #1b2b48);
             color: #ffffff;
+            overflow-x: hidden;
         }
         header {
-            background: #004f66;
-            padding: 1em;
+            background: #1a3458;
+            padding: 2em;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
-            color: #00ff99;
+            font-size: 3.5em;
+            color: #00ffcc;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         nav {
             text-align: center;
             margin: 1em 0;
         }
         nav a {
-            color: #00ff99;
+            color: #00ffcc;
             text-decoration: none;
-            margin: 0 1em;
+            margin: 0 1.5em;
             font-weight: bold;
+            font-size: 1.3em;
+            transition: color 0.3s ease;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #009999;
+        }
+        .hero {
+            text-align: center;
+            padding: 6em 2em;
+            background: url('https://source.unsplash.com/1600x900/?space,stars') no-repeat center center/cover;
+            color: #ffffff;
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.7);
+            background-size: cover;
+        }
+        .hero h2 {
+            font-size: 3.5em;
+            margin: 0.5em 0;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 1em 0;
         }
         .container {
-            max-width: 800px;
-            margin: 2em auto;
-            padding: 1em;
-            background: rgba(0, 15, 30, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            max-width: 1200px;
+            margin: 3em auto;
+            padding: 3em;
+            background: rgba(10, 15, 30, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
         }
-        .section {
-            margin-bottom: 2em;
-        }
-        .button {
-            display: inline-block;
-            padding: 1em 2em;
-            margin: 1em 0;
-            color: #ffffff;
-            background: #00ff99;
-            text-decoration: none;
-            border-radius: 5px;
+        .section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #00ffcc;
+            margin-bottom: 1em;
             font-weight: bold;
         }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 1em 0;
+            font-size: 1.2em;
+            position: relative;
+            padding-left: 1.5em;
+        }
+        ul li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: #00ffcc;
+            font-size: 1.5em;
+        }
+        .button {
+            display: block;
+            text-align: center;
+            padding: 1.5em 2.5em;
+            margin: 2em auto;
+            color: #ffffff;
+            background: #00ffcc;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.6em;
+            max-width: 350px;
+            transition: background 0.3s ease;
+        }
         .button:hover {
-            background: #009966;
+            background: #009999;
         }
         footer {
             text-align: center;
-            padding: 1em 0;
-            background: #00334d;
-            font-size: 0.9em;
+            padding: 2.5em 0;
+            background: #102030;
+            font-size: 1.2em;
+            color: #cccccc;
+        }
+        footer a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .starry-background {
+            background: url('https://source.unsplash.com/1600x900/?stars,space') no-repeat center center/cover;
+            height: 300px;
+            margin: 3em 0;
+            position: relative;
+        }
+        .starry-background .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .quote-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3em;
+            margin: 3em 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .quote-section h3 {
+            font-size: 2.2em;
+            color: #00ffcc;
+            text-align: center;
+        }
+        .quote-section p {
+            text-align: center;
+            font-size: 1.5em;
+            font-style: italic;
         }
     </style>
 </head>
@@ -73,25 +159,49 @@
         <nav>
             <a href="#info">Info</a>
             <a href="#download">Download</a>
+            <a href="#quote">Why Choose Us?</a>
         </nav>
     </header>
 
+    <div class="hero">
+        <h2>Transform Your Fortnite Experience</h2>
+        <p>Elevate your gameplay with Moon Swapper, the ultimate tool for Fortnite customization. Take control of your in-game look and performance today.</p>
+    </div>
+
     <main>
         <section id="info" class="container section">
-            <h2>What is Moon Swapper?</h2>
-            <p>Moon Swapper is your ultimate Fortnite skin changer. Transform your in-game look with ease and enjoy a variety of customizations to stand out in every match.</p>
-            <p>With a sleek, user-friendly interface and reliable performance, Moon Swapper ensures a seamless experience for all Fortnite enthusiasts.</p>
+            <h2>About Moon Swapper</h2>
+            <p><strong>Moon Swapper</strong> is more than just a skin changer—it's a revolutionary tool designed to enhance your Fortnite experience. Whether you're looking to stand out with custom skins or fine-tune your gameplay with advanced features, Moon Swapper provides an intuitive, user-friendly interface for players of all levels.</p>
+            <ul>
+                <li>Instantly swap any skin for another with incredible ease.</li>
+                <li>Customize your Field of View (FOV) to enhance gameplay clarity.</li>
+                <li>Extremely simple and user-friendly interface—no technical expertise required.</li>
+                <li>Completely free, with no hidden fees or purchases needed.</li>
+                <li>Regular updates to maintain compatibility with the latest Fortnite patches.</li>
+                <li>Safe and secure, ensuring your account remains untouched while using Moon Swapper.</li>
+                <li>Developed by gamers for gamers—constantly improving based on community feedback.</li>
+            </ul>
+            <p>With Moon Swapper, you don't just change skins—you reshape your entire Fortnite adventure. Embrace the freedom of limitless customization, all while ensuring your experience is smooth, seamless, and 100% secure. Join our growing community and discover why players around the world trust Moon Swapper for all their Fortnite customization needs.</p>
+        </section>
+
+        <div class="starry-background">
+            <div class="overlay"></div>
+        </div>
+
+        <section id="quote" class="quote-section">
+            <h3>Why Choose Moon Swapper?</h3>
+            <p>"Moon Swapper isn't just a tool—it's an entire experience that transforms the way you play Fortnite. With constant updates, premium features, and a focus on security and usability, it’s the ultimate choice for every Fortnite player." – The Moon Swapper Team</p>
         </section>
 
         <section id="download" class="container section">
             <h2>Download Moon Swapper</h2>
-            <p>Click the button below to download the latest version of Moon Swapper. Start customizing your Fortnite experience now!</p>
-            <a href="#" class="button">Download Now</a>
+            <p>Ready to start your Fortnite transformation? Download Moon Swapper now and unlock endless possibilities. It’s completely free, secure, and easy to get started. Just click the button below to get your hands on the tool that will change your game forever.</p>
+            <a href="https://www.dropbox.com/scl/fo/xrchvatfrxk8kyx8gr8nm/AAjYNvq1s5u6IivvuKmgIRA?rlkey=lfay85ru88b3tuvr35hk0ua3w&st=a7r01soi&dl=0" class="button" download>Download Now</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Moon Swapper. All rights reserved. | Designed with love in the cosmos.</p>
+        <p>&copy; 2024 Moon Swapper. All rights reserved. Moon Swapper and its features are intended for educational and personal use only. Unauthorized distribution or commercial use is prohibited. For inquiries, please contact us through our official support channels. | <a href="#">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
