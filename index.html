@@ -154,39 +154,82 @@
         footer a:hover {
             text-decoration: underline;
         }
-        .starry-background {
-            background: url('https://source.unsplash.com/1600x900/?stars,space') no-repeat center center/cover;
-            height: 350px;
+        .testimonials {
+            background: #3e4c64;
+            padding: 4em 3em;
             margin: 4em 0;
-            position: relative;
-            animation: parallaxEffect 5s infinite linear;
+            text-align: center;
         }
-        @keyframes parallaxEffect {
-            0% { background-position: 0 0; }
-            100% { background-position: 0 100%; }
+        .testimonials h2 {
+            color: #ffffff;
+            font-size: 3em;
+            margin-bottom: 1em;
         }
-        .quote-section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 4em;
-            margin: 3em 0;
-            border-radius: 20px;
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+        .testimonials p {
+            font-size: 1.5em;
+            color: #d0e0e6;
+            margin-bottom: 1.5em;
         }
-        .quote-section h3 {
-            font-size: 2.5em;
+        .faq {
+            background: #1b2b48;
+            padding: 4em 3em;
+            margin: 4em 0;
+        }
+        .faq h2 {
+            font-size: 3em;
             color: #00ffcc;
             text-align: center;
             margin-bottom: 1em;
         }
-        .quote-section p {
+        .faq p {
+            font-size: 1.3em;
+            color: #d0e0e6;
             text-align: center;
-            font-size: 1.6em;
-            font-style: italic;
-            animation: quoteFadeIn 2.5s ease-out;
         }
-        @keyframes quoteFadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        .faq ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        .faq ul li {
+            padding: 1.5em;
+            margin: 1em 0;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+        .contact {
+            background: #2c3e50;
+            padding: 4em 3em;
+            color: #ffffff;
+        }
+        .contact h2 {
+            font-size: 3em;
+            margin-bottom: 1em;
+            color: #00ffcc;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 1em;
+            margin: 1em 0;
+            background: #1b2b48;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+        }
+        .contact form input[type="submit"] {
+            background: #00ffcc;
+            border: none;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact form input[type="submit"]:hover {
+            background: #009999;
         }
     </style>
 </head>
@@ -195,8 +238,11 @@
         <h1>Moon Swapper</h1>
         <nav>
             <a href="#info">Info</a>
+            <a href="#features">Features</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
             <a href="#download">Download</a>
-            <a href="#quote">Why Choose Us?</a>
         </nav>
     </header>
 
@@ -206,29 +252,54 @@
     </div>
 
     <main>
+        <!-- Info Section -->
         <section id="info" class="container section">
             <h2>About Moon Swapper</h2>
             <p><strong>Moon Swapper</strong> is more than just a skin changer—it's a revolutionary tool designed to enhance your Fortnite experience. Whether you're looking to stand out with custom skins or fine-tune your gameplay with advanced features, Moon Swapper provides an intuitive, user-friendly interface for players of all levels.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="container section" style="background-color: #3e4c64;">
+            <h2>Key Features</h2>
             <ul>
                 <li>Instantly swap any skin for another with incredible ease.</li>
                 <li>Customize your Field of View (FOV) to enhance gameplay clarity.</li>
-                <li>Extremely simple and user-friendly interface—no technical expertise required.</li>
                 <li>Completely free, with no hidden fees or purchases needed.</li>
                 <li>Regular updates to maintain compatibility with the latest Fortnite patches.</li>
                 <li>Safe and secure, ensuring your account remains untouched while using Moon Swapper.</li>
-                <li>Developed by gamers for gamers—constantly improving based on community feedback.</li>
             </ul>
-            <p>With Moon Swapper, you don't just change skins—you reshape your entire Fortnite adventure. Embrace the freedom of limitless customization, all while ensuring your experience is smooth, seamless, and 100% secure. Join our growing community and discover why players around the world trust Moon Swapper for all their Fortnite customization needs.</p>
         </section>
 
-        <div class="starry-background"></div>
-
-        <section id="quote" class="quote-section">
-            <h3>Why Choose Moon Swapper?</h3>
-            <p>"Moon Swapper isn't just a tool—it's an entire experience that transforms the way you play Fortnite. With constant updates, premium features, and a focus on security and usability, it’s the ultimate choice for every Fortnite player." – The Moon Swapper Team</p>
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <h2>What Players Are Saying</h2>
+            <p>"Moon Swapper made my Fortnite experience so much better. I can now customize my gameplay and look exactly how I want!" – Player A</p>
+            <p>"The simple interface and consistent updates have made this tool my go-to for Fortnite customization." – Player B</p>
         </section>
 
-        <section id="download" class="container section">
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <ul>
+                <li><strong>Is Moon Swapper safe to use?</strong> Yes, it’s completely safe and doesn’t affect your Fortnite account.</li>
+                <li><strong>Do I need to pay for it?</strong> No, Moon Swapper is entirely free to use!</li>
+                <li><strong>Will it work with the latest Fortnite updates?</strong> Yes, we provide regular updates to ensure compatibility.</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form action="mailto:support@moonswapper.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="container section" style="background-color: #1b2b48;">
             <h2>Download Moon Swapper</h2>
             <p>Ready to start your Fortnite transformation? Download Moon Swapper now and unlock endless possibilities. It’s completely free, secure, and easy to get started. Just click the button below to get your hands on the tool that will change your game forever.</p>
             <a href="https://www.dropbox.com/scl/fo/uhbbnmyxzcpfi7nme5wuj/ABLiU-8XvKwUYBFG5TgWxZs?rlkey=a2xpcrf48muor4zjpa1leyg32&st=ymnku7yi&dl=1" class="button" download>Download Now</a>
